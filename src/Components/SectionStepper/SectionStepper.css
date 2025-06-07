@@ -1,0 +1,35 @@
+.stepper-do {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.stepper-do__title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 68px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #020637;
+  margin-bottom: 24px;
+}
+
+.stepper-do__subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #020637;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.stepper-do__content {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-radius: 30px;
+  background: radial-gradient(ellipse at center center,
+      rgba(85, 99, 246, 0.44) 0%,
+      rgba(85, 99, 246, 0) 75%);
+}

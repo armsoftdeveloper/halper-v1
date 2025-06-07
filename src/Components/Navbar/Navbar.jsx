@@ -1,0 +1,278 @@
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState, useRef } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import LoginIcon from '@mui/icons-material/Login';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import logo from "../../images/logo.png";
+import { fetchNavbarLinks } from "./navbarSlice";
+import "./navbar.css";
+
+const solutionsMenu = {
+  byServices: [
+    "Client Communication & CRM Automation",
+    "Scheduling & Calendar Integration",
+    "Financial Management",
+    "Business Analytics & Insights",
+    "Marketing Automation",
+    "Inventory & Product Management",
+    "Employee & Resource Management",
+    "Mental Health & Wellbeing",
+    "Customer Success & Retention",
+    "Social Impact & Community",
+    "Business Risk & Strategy",
+    "Reporting & Feedback",
+    "External Integrations & API Connectivity",
+    "Mobile & Notifications",
+    "Cross-Platform Ads & Promotions",
+  ],
+  byIndustry: [
+    "Beauty & Personal Care",
+    "Health & Wellness",
+    "Spiritual & Esoteric Services",
+    "Fitness & Wellness",
+    "Business Support & Administration",
+    "Senior Care Services",
+    "Pet Care & Veterinary Services",
+    "Home Services & Repairs",
+    "Teaching & Skills-Based Jobs",
+    "Skilled Trades & Manual Work",
+    "Freelancers & Agencies",
+    "Sales & Real Estate",
+  ],
+};
+
+const partnersMenu = [
+  "Affiliate program",
+  "Referral Program",
+  "Become a partner",
+  "Ambassadors",
+];
+
+const resourcesMenu = [
+  "Blog",
+  "Press",
+  "Get support",
+  "Contact us",
+];
+
+export default function Navbar() {
+  const dispatch = useDispatch();
+  const { links, status } = useSelector((state) => state.navbar);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
+  // Для отображения подменю на десктопе
+  const [openDropdown, setOpenDropdown] = useState(null); // 'solutions', 'partners', 'resources' или null
+
+  // Для мобильного меню - какое подменю открыто, null если ни одно
+  const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(null);
+
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(fetchNavbarLinks());
+    }
+  }, [dispatch, status]);
+
+  const handleCloseMenu = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setMobileMenuOpen(false);
+      setIsClosing(false);
+      setMobileSubmenuOpen(null); // закрываем все подменю при закрытии меню
+    }, 300);
+  };
+
+  // Закрываем подменю при клике вне
+  const dropdownRef = useRef();
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpenDropdown(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  if (status === "loading") {
+    return (
+      <nav className="navbar">
+        <div className="navbar__inner">
+          <p>Loading...</p>
+        </div>
+      </nav>
+    );
+  }
+
+  if (status === "failed") {
+    return (
+      <nav className="navbar">
+        <div className="navbar__inner">
+          <p>Error loading navbar links</p>
+        </div>
+      </nav>
+    );
+  }
+
+  // Рендер подменю с разделением для solutions
+  const renderDropdown = (key) => {
+    if (key === "solutions") {
+      return (
+        <div className="dropdown-menu solutions-dropdown">
+          <div className="dropdown-column">
+            <h4 className="dropdown-title">By Services</h4>
+            <ul>
+              {solutionsMenu.byServices.map((item, idx) => (
+                <li key={idx} className="dropdown-menu__item">{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="dropdown-column">
+            <h4 className="dropdown-title">By Industry</h4>
+            <ul>
+              {solutionsMenu.byIndustry.map((item, idx) => (
+                <li key={idx} className="dropdown-menu__item">{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      );
+    } else {
+      let items = [];
+      if (key === "partners") items = partnersMenu;
+      else if (key === "resources") items = resourcesMenu;
+      else return null;
+
+      return (
+        <ul className="dropdown-menu">
+          {items.map((item, idx) => (
+            <li key={idx} className="dropdown-menu__item">{item}</li>
+          ))}
+        </ul>
+      );
+    }
+  };
+
+  // Обработчик клика на мобильном меню, открывающий/закрывающий подменю
+  const toggleMobileSubmenu = (label) => {
+    if (mobileSubmenuOpen === label) {
+      setMobileSubmenuOpen(null);
+    } else {
+      setMobileSubmenuOpen(label);
+    }
+  };
+
+  return (
+    <>
+      <nav className="navbar">
+        <div className="navbar__inner">
+          <div className="navbar__left">
+            <Link to="/">
+              <img src={logo} alt="HALPER" className="navbar__logo" />
+            </Link>
+            <ul className="navbar__list desktop-only" ref={dropdownRef}>
+              {links.map((item, index) => {
+                const hasDropdown =
+                  item.label === "Solutions" ||
+                  item.label === "Partners" ||
+                  item.label === "Resources";
+
+                return (
+                  <li
+                    key={index}
+                    className="navbar__list-item"
+                    onMouseEnter={() =>
+                      hasDropdown && setOpenDropdown(item.label.toLowerCase())
+                    }
+                    onMouseLeave={() => hasDropdown && setOpenDropdown(null)}
+                  >
+                    <button className="navbar__link">
+                      {item.label}{" "}
+                    </button>
+                    {openDropdown === item.label.toLowerCase() &&
+                      renderDropdown(item.label.toLowerCase())}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          <div className="navbar__right">
+            <button className="navbar__btn navbar__btn--demo--login button-hide" type="button">
+              Login
+            </button>
+            <button className="navbar__btn navbar__btn--demo" type="button">
+              Schedule Demo
+            </button>
+
+            <button
+              className="navbar__menu-btn mobile-only"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <MenuIcon />
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {mobileMenuOpen && (
+        <div className={`mobile-menu ${isClosing ? "slide-out" : "slide-in"}`}>
+          <div className="mobile-menu__header">
+            <img src={logo} alt="HALPER" className="navbar__logo" />
+            <button onClick={handleCloseMenu} className="mobile-menu__close">
+              <CloseIcon />
+            </button>
+          </div>
+
+          <ul className="mobile-menu__list">
+            {links.map((item, index) => {
+              const hasSubmenu =
+                item.label === "Solutions" ||
+                item.label === "Partners" ||
+                item.label === "Resources";
+
+              return (
+                <li key={index} className="mobile-menu__item">
+                  <button
+                    onClick={() => {
+                      if (hasSubmenu) {
+                        toggleMobileSubmenu(item.label);
+                      } else {
+                        handleCloseMenu();
+                      }
+                    }}
+                    className="mobile-menu__button"
+                    aria-expanded={mobileSubmenuOpen === item.label}
+                  >
+                    {item.label}
+                    {hasSubmenu && <KeyboardArrowDownIcon />}
+                  </button>
+
+                  {hasSubmenu && mobileSubmenuOpen === item.label && (
+                    <ul className="mobile-submenu">
+                      {(item.label === "Solutions"
+                        ? [...solutionsMenu.byServices, ...solutionsMenu.byIndustry]
+                        : item.label === "Partners"
+                        ? partnersMenu
+                        : resourcesMenu
+                      ).map((subItem, subIndex) => (
+                        <li key={subIndex} className="mobile-submenu__item">
+                          {subItem}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+    </>
+  );
+}

@@ -1,0 +1,317 @@
+.payment-plan {
+  background: linear-gradient(to bottom, rgba(85, 99, 246, 1), rgba(2, 6, 55, 1));
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.payment-plan__title {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 68px !important;
+  line-height: 120%;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.payment-plan__description {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 24px !important;
+  line-height: 150%;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.payment-plan__toggle {
+  background: white;
+  border-radius: 30px !important;
+  display: inline-flex;
+  grid-gap: 15px;
+  padding: 8px;
+}
+
+.plan-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+
+.plan-card {
+  width: 581px;
+  min-height: 600px;
+  border-radius: 30px;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+
+.plan-card__title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 68px;
+  margin-bottom: 16px;
+}
+
+.plan-card__text {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 20px !important;
+  line-height: 150%;
+  color: rgba(78, 81, 115, 1);
+  margin-bottom: 32px;
+}
+
+.price-value {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 78px !important;
+  color: rgba(2, 6, 55, 1);
+}
+
+.price-period {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 24px !important;
+  color: rgba(106, 106, 106, 1);
+  margin-left: 8px;
+}
+
+.plan-card__button {
+  width: 100%;
+  max-width: 485px;
+  height: 48px;
+  border-radius: 10px !important;
+  border: none;
+  background: rgba(84, 99, 246, 1) !important;
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 32px;
+  transition: background-color 0.3s;
+}
+
+.plan-card__button:hover {
+  background: #3b49d4;
+}
+
+.plan-card__included-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 32px !important;
+  color: rgba(84, 99, 246, 1);
+  margin-bottom: 12px;
+}
+
+.plan-card__features-title {
+  font-family: 'Manrope', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  color: rgba(53, 56, 95, 1);
+  margin-bottom: 12px;
+}
+
+.plan-card__features {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(26, 26, 26, 1);
+  margin-bottom: 8px;
+}
+
+.plan-card__icons-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  grid-gap: 50px;
+}
+
+.plan-card__icons-bar .icon {
+  display: flex;
+  align-items: center;
+  grid-gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(242, 244, 250, 1) !important;
+}
+
+.plan-btn {
+  font-family: "Manrope", sans-serif !important;
+  margin-top: 20px !important;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+
+@media(max-width:992px) {
+  .toggle-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 59% !important;
+  }
+
+  .payment-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .payment-plan__toggle {
+    max-width: 100%;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .plan-card {
+    max-width: 100%;
+  }
+
+  .prices-box {
+    flex-direction: column;
+  }
+
+  .payment-plan {
+    margin-top: 90px;
+  }
+
+  .payment-plan__toggle_bottom {
+    border-radius: 0px;
+  }
+
+  .payment-plan__title {
+    font-size: 28px !important;
+  }
+
+  .plan-btn {
+    font-size: 10px !important;
+    margin-top: 0px !important;
+  }
+
+  .prices-box {
+    padding-left: 0px !important;
+  }
+
+  .prices-box>span {
+    margin-left: 0px !important;
+  }
+
+  .mobile-btn-payment-plan {
+    font-size: 10px !important;
+  }
+
+  .plan-cards-container div {
+    padding: 10px;
+  }
+
+  .plan-cards-container svg {
+    display: none;
+  }
+
+  .payment-plan__description {
+    font-size: 12px !important;
+    padding: 0px !important;
+  }
+
+  .payment-plan__description b {
+    font-weight: normal;
+  }
+
+  .plan-card__included-title {
+    font-size: 16px !important;
+  }
+
+  .price-value {
+    font-size: 48px !important;
+  }
+
+  .plan-card__icons-bar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+  }
+
+  .plan-card__icons-bar div {
+    width: 210px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .toggle-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 40px;
+    width: 100%;
+  }
+
+  .payment-plan__toggle_bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+  }
+
+  .payment-plan__toggle_bottom button {
+    font-size: 16px;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Manrope', sans-serif !important;
+    line-height: 150%;
+  }
+
+  .payment-plan__toggle_bottom-active {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    background-color: red;
+  }
+}
+
+@media (max-width:465px) {
+  .toggle-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+  }
+
+  .toggle-parent button {
+    font-size: 14px !important;
+  }
+}

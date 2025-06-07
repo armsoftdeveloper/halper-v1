@@ -1,0 +1,111 @@
+.build_section {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.inner_typography {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.build__content {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 84px;
+}
+
+.build_section p {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 68px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #020637;
+    margin-bottom: 24px;
+    width: 900px;
+}
+
+.build__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.build__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 16px;
+    width: 753px;
+    height: 198px;
+    border: 2px solid #4452E6;
+    border-radius: 40px;
+    font-size: 42px;
+    background: #4452E6;
+    color: #ffffff;
+    transition: 0.5s all;
+    font-family: "Manrope", sans-serif;
+    cursor: pointer;
+}
+
+.build__button:hover {
+    background: #ffffff;
+    color: #4452E6;
+}
+
+.build_section--colored {
+    background-color: rgba(84, 99, 246, 1);
+}
+
+.build_section--colored .inner_typography p {
+    color: rgba(255, 255, 255, 1);
+}
+
+.build__button--colored {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(84, 99, 246, 1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.build__button--colored:hover {
+    background-color: rgba(84, 99, 246, 1);
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+
+@media (max-width:1200px) {
+    .build_section .inner_typography p {
+        font-size: 34px;
+        width: 83%;
+    }
+
+    .build__button-container {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .build__button-container .build__button {
+        font-size: 16px;
+        height: 80px;
+        border-radius: 12px;
+        width: 70%;
+    }
+
+    .build__button-container .build__button svg {
+        font-size: 16px;
+    }
+
+    .build__content {
+        grid-gap: 0px;
+    }
+}
+
+@media (max-width:768px) {
+    .build_section .inner_typography p {
+        font-size: 24px;
+        width: 100%;
+    }
+}

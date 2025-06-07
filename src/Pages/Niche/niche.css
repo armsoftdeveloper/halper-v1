@@ -1,0 +1,407 @@
+.niche {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    padding-bottom: 150px;
+}
+
+.niche-main {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom, rgba(242, 244, 250, 1), rgba(242, 244, 250, 0));
+    padding: 100px;
+    gap: 70px;
+    box-sizing: border-box;
+}
+
+.niche_main__left {
+    width: 590px;
+    height: 522px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 70px;
+    color: rgba(2, 6, 55, 1);
+}
+
+.niche_main__heading {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 68px;
+    line-height: 120%;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.niche_main__info {
+    width: 399px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(68, 82, 230, 1);
+}
+
+.niche_main_info_col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.niche_main__info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.niche_main__button {
+    width: 349px;
+    height: 72px;
+    padding: 18px 60px;
+    background: transparent;
+    border: 2px solid rgba(68, 82, 230, 1);
+    border-radius: 20px;
+    color: rgba(68, 82, 230, 1);
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.niche_main__button:hover {
+    background-color: rgba(68, 82, 230, 1);
+    color: white;
+    border-color: rgba(68, 82, 230, 1);
+}
+
+.niche_main__right {
+    width: 606px;
+    height: 516.48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #D8E8F2;
+    border-radius: 20px;
+}
+
+.niche_main__right-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+/* === Inner niche === */
+.inner-niche {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 50px;
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+.niche-typography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+}
+
+.niche-typography h1 {
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 120px;
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(2, 6, 55, 1);
+}
+
+.niche-typography p {
+    width: 838px;
+    height: 72px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(53, 56, 95, 1);
+}
+
+.niche-cols-parent {
+    display: flex;
+    justify-content: center;
+}
+
+.niche .col-left {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.niche .col {
+    width: 300px;
+    height: 252px;
+    border: 1px solid rgba(230, 231, 245, 1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.niche .col:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.niche .col-img {
+    width: 300px;
+    height: 164px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(230, 231, 245, 1);
+    border-radius: 20px 20px 0 0;
+}
+
+.niche .col-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.niche .col-button {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: rgba(2, 6, 55, 1);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0 10px;
+}
+
+.niche .col-button:hover {
+    color: rgba(87, 100, 217, 1);
+}
+
+.niche .badge-mobile {
+    padding: 0px !important;
+}
+
+.build_section_niche {
+    background: rgba(84, 99, 246, 1);
+    margin-top: 0px;
+}
+
+.build_section_niche .build_section_niche__content .inner__build__niche_typography p {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.build_section_niche .build_section_niche__content .build_section_niche_button {
+    background: rgba(255, 255, 255, 1) !important;
+    color: rgba(84, 99, 246, 1);
+}
+
+@media (min-width:992px) {
+    .niche_main_info_col_display {
+        display: flex;
+    }
+
+    .niche_main_info_col_mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .niche-main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        gap: 40px;
+        padding: 0px !important;
+        padding-top: 50px !important;
+        text-align: center;
+    }
+
+    .niche_main__left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .niche_main__heading {
+        font-weight: 500;
+        font-size: 28px;
+    }
+
+    .niche_main__info {
+        justify-content: center;
+        gap: 16px;
+        font-size: 14px;
+        width: 278px;
+    }
+
+    .niche_main__info-item span {
+        font-size: 28px;
+    }
+
+    .niche_main__button {
+        width: 100%;
+        height: 56px;
+        padding: 12px 40px;
+        font-size: 28px;
+    }
+
+    .niche_main__right {
+        width: 90%;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+
+    .niche_main__right-img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+
+    .niche .inner-niche .niche-typography h1 {
+        font-size: 28px;
+    }
+
+    .niche .inner-niche .niche-typography p {
+        font-size: 24px;
+    }
+
+    .niche_main__info-item {
+        font-size: 15px;
+    }
+
+    .niche .col-text {
+        padding: 0px;
+    }
+
+    .niche_main_info_col_display {
+        display: none;
+    }
+
+    .niche_main_info_col_mobile {
+        display: flex;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .niche_main__heading {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+    .niche .col-left {
+        justify-content: center;
+    }
+
+    .niche .col {
+        width: 148px;
+        height: 168px;
+        border: 2px solid rgba(184, 190, 213, 1);
+
+    }
+
+    .niche .col-img {
+        width: 100%;
+    }
+
+    .niche .col-button {
+        height: auto;
+        font-size: 12px;
+        text-align: start !important;
+        height: 64px;
+        font-weight: 500;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .niche .inner-niche .niche-typography h1 {
+        font-size: 36px;
+    }
+
+    .niche .inner-niche .niche-typography p {
+        width: 90%;
+        font-size: 18px;
+        height: auto;
+    }
+
+    .niche_main__info-item span {
+        font-size: 20px;
+    }
+
+    .niche_main__button {
+        font-size: 20px;
+    }
+
+    .niche_main__button>* {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width:465px) {
+    .niche .col-left {
+        width: 100%;
+    }
+
+    .niche_main__info-item span {
+        font-size: 12px;
+    }
+
+    .niche_main__button {
+        font-size: 12px;
+    }
+
+
+    .niche .col {
+        width: 46%;
+        height: auto;
+        border: 2px solid rgba(184, 190, 213, 1);
+    }
+
+    .niche-typography h1 {
+        font-size: 28px !important;
+    }
+
+    .niche-typography p {
+        font-size: 12px !important;
+    }
+}

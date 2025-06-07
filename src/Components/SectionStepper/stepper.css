@@ -1,0 +1,342 @@
+.stepper-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.stepper-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    gap: 36px;
+    position: relative;
+    justify-content: center;
+}
+
+.stepper-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 458px;
+    min-height: 773px;
+    border-radius: 20px;
+}
+
+.stepper-step {
+    width: 100%;
+    max-width: 458px;
+    min-height: 86px;
+    background: #fff;
+    border-radius: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid gray;
+    font-family: "Manrope", sans-serif;
+    color: rgba(2, 6, 55, 1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    line-height: 150%;
+    padding: 12px 0;
+}
+
+.stepper-step p {
+    padding-left: 28px;
+}
+
+.stepper-step.active {
+    border-color: #5463f6;
+    opacity: 1;
+    font-weight: 600;
+    color: rgba(2, 6, 55, 1);
+}
+
+.stepper-right {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+    max-width: 802px;
+    min-height: 773px;
+}
+
+.stepper-content-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    min-height: auto;
+    max-width: 802px;
+    width: 100%;
+}
+
+.stepper-img {
+    width: 100%;
+    max-height: 439px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.stepper-typography {
+    display: flex;
+    align-items: flex-start;
+    gap: 21px;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 25px;
+}
+
+.stepper-title {
+    font-size: clamp(20px, 4vw, 32px);
+    font-weight: 700;
+    line-height: 100%;
+    font-family: "Manrope", sans-serif;
+    color: rgba(26, 26, 26, 1);
+}
+
+.stepper-typography ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: start;
+    line-height: 150%;
+}
+
+.stepper-typography ul li {
+    color: rgba(2, 6, 55, 0.6);
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    line-height: 150%;
+}
+
+.step-content-btn-parent {
+    width: 100%;
+}
+
+.stepper-typography-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    width: 248px;
+    height: 54px;
+    font-size: 16px;
+    gap: 8px;
+    font-weight: bold;
+    border: 2px solid rgba(68, 82, 230, 1);
+    border-radius: 12px;
+    color: rgba(68, 82, 230, 1);
+    background: transparent;
+    transition: all 0.5s ease;
+    font-family: "Manrope", sans-serif;
+    cursor: pointer;
+}
+
+.stepper-typography-button:hover {
+    background: #4452E6;
+    color: #ffffff;
+}
+
+.stepper-done {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 64px;
+}
+
+.stepper-done-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 349px;
+    height: 72px;
+    padding: 16px 32px;
+    border: 2px solid rgba(68, 82, 230, 1);
+    background: rgba(84, 99, 246, 1);
+    color: #FFFFFF;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Manrope", sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.stepper-done-button:hover {
+    background: transparent;
+    color: #4452E6;
+    border: 2px dotted #4452E6;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Tablet & below */
+@media (max-width: 1200px) {
+
+    .b-subtitle {
+        display: none !important;
+    }
+
+    .stepper-inner {
+        flex-direction: column;
+    }
+
+    .stepper-left {
+        padding: 0;
+        min-height: auto;
+    }
+
+    .stepper-left,
+    .stepper-right {
+        width: 100%;
+    }
+
+    .stepper-content-block {
+        padding: 0;
+        background: none;
+        margin-bottom: 20px;
+    }
+
+    .stepper-typography {
+        margin-top: 20px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .stepper-typography ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .stepper-title {
+        text-align: start;
+    }
+
+    .step-content-btn-parent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stepper-typography-button {
+        height: 74px;
+        width: 349px;
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 24px;
+    }
+
+    .stepper-done {
+        display: none;
+    }
+
+    .stepper-left {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .stepper-step {
+        max-width: 100%;
+        opacity: 1;
+        border-radius: 10px;
+    }
+
+    .stepper-right {
+        max-width: 100%;
+    }
+
+    .stepper-do__content {
+        margin-top: 0px;
+        padding-left: 50px;
+        padding-right: 50px;
+        border-radius: 0px !important;
+        padding-bottom: 50px;
+    }
+
+    .stepper-content-block {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .stepper-img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .stepper-do__content {
+        background: linear-gradient(to top, rgba(87, 100, 217, 1)0%, rgba(85, 99, 246, 0) 100%) !important;
+    }
+}
+
+
+@media (max-width:768px) {
+    .stepper-do__title {
+        font-size: 28px !important;
+    }
+
+    .stepper-do__subtitle {
+        font-size: 12px !important;
+    }
+}
+
+/* Mobile-specific */
+@media (max-width: 480px) {
+    .stepper-step {
+        font-size: 16px;
+        padding: 16px;
+        min-height: auto;
+    }
+
+    .stepper-step p {
+        padding-left: 12px;
+    }
+
+    .stepper-typography-button {
+        width: 100%;
+        font-size: 18px;
+        height: 60px;
+    }
+
+    .stepper-title {
+        font-size: 20px;
+    }
+
+    .stepper-do__content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,245 @@
+.halper-do {
+  text-align: center;
+  background: url('../../images/bg1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 130%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.halper-do .container {
+  width: 100%;
+}
+
+.halper-do__title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 68px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: #020637;
+  margin-bottom: 24px;
+}
+
+.halper-do__subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: rgba(2, 6, 55, 0.6);
+  max-width: 880px;
+  margin: 0 auto;
+  line-height: 150%;
+}
+
+.halper-do__content {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 80px;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  min-height: auto;
+}
+
+.halper-do__image {
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 664px;
+  width: 100%;
+}
+
+.halper-do__image img {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.halper-do__features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.halper-do__feature {
+  width: 556px;
+  min-height: 130px;
+  background-color: #ffffff;
+  border: 1px solid #b8bed5;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+.halper-do__feature-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: rgba(26, 26, 26, 1);
+}
+
+.halper-do__feature-icon {
+  color: rgba(58, 48, 255, 1);
+}
+
+.halper-do__feature-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  padding-left: 36px;
+  margin-top: 10px;
+  color: rgba(106, 106, 106, 1);
+}
+
+.halper-do__btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 80px;
+  padding-bottom: 70px;
+}
+
+.halper-do__btn {
+  display: flex;
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  max-width: 349px;
+  width: 100%;
+  height: 72px;
+  background: #ffffff;
+  border: 2px solid rgba(68, 82, 230, 1);
+  color: rgba(84, 99, 246, 1);
+  font-weight: bold;
+  border-radius: 20px;
+  font-size: 24px;
+  font-family: "Manrope", sans-serif;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  line-height: 150%;
+}
+
+.halper-do__btn:hover {
+  background: #5463F6;
+  color: #ffffff;
+}
+
+.halper-do__features.mobile {
+  display: none;
+}
+
+@media (max-width:1200px) {
+  .halper-do__image {
+    max-width: 75%;
+  }
+
+  .halper-do__features {
+    width: 75%;
+  }
+
+  .halper-do__feature {
+    width: 100%;
+  }
+
+  .halper-do__content {
+    grid-gap: 25px;
+    margin-top: 0px;
+    padding: 0px;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .halper-do__features.desktop {
+    display: none;
+  }
+
+  .halper-do__features.mobile {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .halper-do__features.mobile .swiper {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .halper-do__features.mobile .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .halper-do__feature {
+    width: 100%;
+    background: #f7f9fc;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .halper-do__feature-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .halper-do__feature-description {
+    font-size: 15px;
+    color: #555;
+  }
+
+  .swiper-pagination-bullets {
+    bottom: 0px !important;
+    text-align: center;
+  }
+
+  .swiper-pagination-bullet {
+    background: rgba(230, 231, 245, 1);
+    opacity: 0.4;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: rgba(255, 255, 255, 1) !important;
+  }
+
+  .halper-do__image {
+    max-width: 100%;
+  }
+
+  .halper-do__subtitle {
+    font-size: 13px !important;
+    line-height: 120%;
+  }
+}
+
+@media (max-width:768px) {
+  .halper-do {
+    margin-top: 10px;
+  }
+}

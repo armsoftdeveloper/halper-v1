@@ -1,0 +1,237 @@
+.choose-us {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.choose-us-inner {
+    margin-top: 50px;
+}
+
+.choose-us__title {
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    font-size: 68px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #020637;
+    margin-bottom: 24px;
+}
+
+.choose-us__subtitle {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #020637;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.choose-us__container {
+    display: flex;
+    gap: 20px;
+    width: 1264px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 711px;
+}
+
+.choose-us__left-column {
+    width: 412px;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid rgb(174, 175, 178);
+    flex-shrink: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0px 7px rgba(222, 222, 222, 0.385);
+}
+
+.choose-us__left-column .choose-us__column-label p {
+    font-size: 18px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+}
+
+.choose-us__left-column img {
+    width: 100%;
+    height: 87%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+}
+
+
+.choose-us__column-label {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px;
+    text-align: center;
+    background-color: #fafafa;
+    border-top: 1px solid rgb(174, 175, 178);
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #020637;
+}
+
+.choose-us__right-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.choose-us__cell {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(174, 175, 178);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: 0px 7px rgba(222, 222, 222, 0.385);
+}
+
+.choose-us__cell img {
+    width: 100%;
+    height: 87%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+}
+
+.choose-us__cell .choose-us__column-label {
+    height: 19%;
+}
+
+.choose-us__cell .choose-us__column-label p {
+    font-size: 18px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+}
+
+.choose-us__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+.choose-us__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    width: 349px;
+    height: 72px;
+    padding: 16px 32px;
+    background: #5463F6;
+    color: #FFFFFF;
+    border-radius: 20px;
+    border: none;
+    font-size: 24px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.choose-us__button svg {
+    font-weight: 700 !important;
+}
+
+.choose-us__button:hover {
+    background: transparent;
+    color: #4452E6;
+    border: 2px dotted #4452E6;
+}
+
+@media (max-width: 992px) {
+    .choose-us {
+        padding: 15px 5px;
+    }
+
+    .choose-us__container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .choose-us__left-column {
+        width: 100%;
+        height: auto;
+    }
+
+    .choose-us__left-column img {
+        height: auto;
+    }
+
+    .choose-us__right-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .choose-us__cell img {
+        height: auto;
+    }
+
+    .choose-us__column-label {
+        justify-content: center;
+    }
+
+    .choose-us__button-container {
+        flex-direction: column;
+    }
+
+    .choose-us__button {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .choose-us__cell .choose-us__column-label {
+        height: 100%;
+    }
+}
+
+@media(max-width:768px) {
+    .choose-us__title {
+        font-size: 28px;
+    }
+
+    .choose-us__subtitle{
+        font-size: 12px !important;
+    }
+
+}
+
+@media (max-width:475px) {
+    .choose-us__title {
+        font-size: 28px;
+    }
+
+    .choose-us__subtitle {
+        font-size: 12px;
+    }
+
+    .choose-us__subtitle b {
+        font-weight: normal;
+    }
+
+    .choose-us__cell .choose-us__column-label p {
+        font-size: 12px;
+        text-align: start;
+    }
+
+    .choose-us__button {
+        width: 100%;
+        height: 54px;
+        font-size: 16px;
+    }
+
+}

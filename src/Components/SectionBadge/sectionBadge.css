@@ -1,0 +1,74 @@
+.badge-container {
+    width: 100%;
+}
+
+.badge-container img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.badge-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.badge-mobile-top {
+    padding-top: 150px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(212, 233, 243, 1), rgba(255, 255, 255, 1));
+}
+
+.badge-mobile .badge-mobile-top h1 {
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.badge-mobile .badge-mobile-top img {
+    width: 100%;
+    margin-left: 47px;
+    height: auto;
+    object-position: right;
+}
+
+.badge-mobile-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 30px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    justify-content: center;
+    width: 100%;
+    background: rgba(2, 6, 55, 1);
+}
+
+.badge-mobile-bottom img {
+    width: 240px;
+    height: 320.83018493652344px;
+}
+
+
+@media (max-width:465px) {
+    .badge-mobile {
+        display: flex;
+        padding-top: 0px;
+    }
+
+    .badge-container {
+        display: none;
+    }
+}

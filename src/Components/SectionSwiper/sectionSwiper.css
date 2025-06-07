@@ -1,0 +1,13 @@
+.section-swiper_main {
+    text-align: start;
+    margin-top: 80px;
+    background: linear-gradient(180deg, rgba(212, 233, 243, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.section-swiper_main_typography p {
+    font-weight: 500;
+    font-size: 60px;
+    font-family: "Manrope", sans-serif;
+    padding: 40px;
+    padding-top: 80px;
+}
