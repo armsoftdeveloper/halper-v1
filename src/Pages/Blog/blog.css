@@ -5,6 +5,9 @@
 
 .blog-page {
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Shared 95% container */
@@ -147,6 +150,10 @@
 }
 
 /* Post Card */
+.post-card-link {
+    text-decoration: none;
+}
+
 .post-card {
     width: 317px;
     height: auto;
@@ -247,6 +254,7 @@
     font-weight: 700;
     font-size: 24px;
     color: #fff;
+    cursor: pointer;
 }
 
 /* Optional Animation for Load More */
@@ -281,6 +289,36 @@
 .light-bg {
     background: rgba(242, 244, 250, 1);
     padding: 60px 0;
+}
+
+.bottom-section-blog-individual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 40px;
+}
+
+.bottom-section-blog-individual .back-button {
+    font-family: Manrope;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(84, 99, 246, 1);
+    border: 2px solid rgba(68, 82, 230, 1);
+    text-transform: capitalize;
+    width: auto;
+    gap: 12px;
+    border-radius: 20px;
+    border-width: 2px;
+    padding-top: 18px;
+    padding-right: 60px;
+    padding-bottom: 18px;
+    padding-left: 60px;
+    cursor: pointer;
 }
 
 /* ========== BIG DESKTOP SCREENS (≥1600px) ========== */
@@ -359,10 +397,12 @@
     .category-nav-desktop {
         display: flex;
     }
-
 }
 
 @media screen and (max-width: 768px) {
+    .blog-container .inner-container {
+        max-width: 100%;
+    }
 
     .category-nav-desktop {
         display: none;

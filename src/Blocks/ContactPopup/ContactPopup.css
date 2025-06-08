@@ -299,49 +299,67 @@
     }
 }
 
-@media (max-width:465px) {
+@media (max-width: 768px) {
     .popup-content-contact {
-        padding: 25px;
+        max-height: 90vh;
+        overflow-y: auto;
+        width: 95vw;
+        padding: 20px;
+        gap: 16px;
     }
 
-    .popup-close-button {
-        position: static;
 
+    .checkbox-text {
+        font-size: 12px;
     }
 
-    .contact-submit-button {
-        font-family: Manrope;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: 0%;
-        text-align: center;
-    }
-
-    .desktop-contact-none {
-        display: none;
-    }
-
-    .contact-mobile {
-        display: flex;
-        flex-direction: column;
+    .contact-popup-left {
         width: 100%;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .mobile-title {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .mobile-description {
+        height: 200px;
+        border-radius: 12px;
+        flex-shrink: 0;
         margin-top: 20px;
     }
 
+    .contact-popup-right {
+        width: 100%;
+        padding: 0;
+        flex-shrink: 0;
+    }
+
+    .contact-title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .contact-description {
+        font-size: 14px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .contact-form {
+        gap: 12px;
+    }
+
+    .contact-input,
+    .contact-select {
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .contact-submit-button {
+        height: 48px;
+        font-size: 15px;
+        margin-top: 16px;
+    }
+
+    .popup-close-button {
+        top: 8px;
+        right: 8px;
+    }
+
     .popup-close-button svg {
-        font-size: 36px;
+        font-size: 30px;
     }
 }

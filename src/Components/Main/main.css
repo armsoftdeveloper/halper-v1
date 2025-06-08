@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: url('../../images/bg1.png') no-repeat center center;
+    background-size: 100% 100%;
 }
 
 .main__row {
@@ -61,7 +63,7 @@
 
 .main__button {
     margin-top: 35px;
-    width: 349px;
+    width: 370px;
     height: 72px;
     padding: 18px 60px;
     border-radius: 20px;
@@ -75,7 +77,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 22px;
     cursor: pointer;
 }
 
@@ -115,8 +117,6 @@
     height: auto;
     width: 100%;
     overflow: hidden;
-    background: url('../../images/bg1.png') no-repeat center center;
-    background-size: 100% 100%;
 }
 
 .main__footer-inner {
@@ -131,7 +131,7 @@
 }
 
 .main__footer-inner-image {
-    max-width: 780px;
+    max-width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,8 +147,14 @@
 
 .main__footer-inner-left {
     position: relative;
-    padding-left: 76px;
+    padding-left: 50px;
     padding-bottom: 28px;
+    width: 100%;
+    max-width: 340px;
+}
+
+.main__footer-inner-image>.swiper>.swiper-wrapper .swiper-slide {
+    height: auto !important;
 }
 
 .main__footer-inner-left>.description {
@@ -161,7 +167,7 @@
     flex-direction: column;
     grid-gap: 15px;
     position: relative;
-    padding-right: 76px;
+    padding-right: 50px;
     padding-bottom: 28px;
 }
 
@@ -195,15 +201,14 @@
     .main-mobile-footer {
         display: none;
     }
-
-    /* .main__footer-inner>img {
-        display: none !important;
-    } */
 }
 
 @media (max-width: 1200px) {
     .main {
         padding: 0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .main__inner .main__row h1 {
@@ -243,14 +248,17 @@
         justify-content: center;
         margin-top: 55px;
         grid-gap: 30px;
+        width: 100%;
     }
 
     .main-mobile-footer>.mobile-top>.description {
-        font-size: 20px;
+        font-family: Manrope;
         font-weight: 700;
+        font-size: 18px;
         line-height: 150%;
-        color: rgba(2, 6, 55, 1);
-        font-family: "Manrope", sans-serif;
+        letter-spacing: 0%;
+        text-align: center;
+
     }
 
     .main-mobile-footer>.mobile-bottom {
@@ -279,12 +287,16 @@
 
     .mobile-icons-parent {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .icons {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        grid-gap: 50px;
     }
 
     .icons .icon {
@@ -325,16 +337,6 @@
         padding: 0px;
     }
 
-    /* .main__footer-inner img {
-            display: block;
-            width: 100%;
-            max-width: 500px;
-            height: 100%;
-            padding-left: 20px;
-            padding-right: 20px;
-            object-fit: contain;
-        } */
-
     .main__row {
         grid-gap: 10px;
     }
@@ -371,5 +373,11 @@
 
     .main__info-item {
         font-size: 11px;
+    }
+}
+
+@media (max-width:465px) {
+    .mobile-icons-parent .icons {
+        grid-gap: 20px;
     }
 }

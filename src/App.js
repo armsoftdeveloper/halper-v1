@@ -10,6 +10,7 @@ import { PopupProvider } from "./Blocks/TryForFreePopup/PopupContext";
 
 import { ContactPopupProvider } from "./Blocks/ContactPopup/ContactPopupContext";
 import ContactPopup from "./Blocks/ContactPopup/ContactPopup";
+import BlogIndividual from "./Pages/Blog/BlogIndividual";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="niche" element={<Niche />} />
             <Route path="individual" element={<Individual />} />
             <Route path="blog" element={<Blog />} />
+            <Route path="/blog-post/:id" element={<BlogIndividual />} />
           </Route>
         </Routes>
         <ContactPopup />

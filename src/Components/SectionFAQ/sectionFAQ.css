@@ -20,7 +20,7 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 24px;
-    color: rgba(2, 6, 55, 0.75);
+    color: rgba(53, 56, 95, 1);
     max-width: 880px;
     margin: 0 auto;
 }
@@ -28,7 +28,6 @@
 @media (max-width:768px) {
     .section-faq {
         padding: 0px !important;
-        margin-top: 80px;
     }
 
     .section-faq__title {

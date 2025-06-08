@@ -110,3 +110,45 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .popup-content-try {
+    padding: 40px 20px;
+    gap: 20px;
+    border-radius: 12px;
+  }
+
+  .popup-left-try .popup-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .popup-left-try .popup-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .popup-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .popup-right-try {
+    width: 70%;
+    height: 200px;
+    border-radius: 12px;
+    transform: rotate(0deg);
+  }
+
+  .popup-close-button-try {
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+  }
+
+  .popup-close-button-try svg {
+    font-size: 32px;
+  }
+}

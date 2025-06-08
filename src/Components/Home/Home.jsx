@@ -1,4 +1,3 @@
-/* Components */
 import Main from "../Main/Main";
 import SectionBadge from "../SectionBadge/SectionBadge";
 import SectionBuild from "../SectionBuild/SectionBuild";

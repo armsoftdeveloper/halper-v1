@@ -47,6 +47,7 @@ export default function Footer() {
                         <img src={logo} className="footer-logo" />
                         <p className="footer-top-left-description">Lectus pretium non potenti eget tincidunt. In feugiat orci id mauris. Vitae sit cursus tellus risus.</p>
                     </div>
+
                     <div className="footer-top-right">
                         <button className="footer-top-right-button"
                             onClick={() => setContactPopupOpen(true)}
@@ -54,8 +55,16 @@ export default function Footer() {
                             Contact Us
                             <KeyboardArrowRightIcon />
                         </button>
-
-
+                        <div class="trustpilot-container">
+                            <div class="trustpilot-widget"
+                                data-locale="en-US"
+                                data-template-id="56278e9abfbbba0bdcd568bc"
+                                data-businessunit-id="6819b7821f4247651fdc9342"
+                                data-style-height="52px"
+                                data-style-width="100%">
+                                <a href="https://www.trustpilot.com/review/halper.ai" target="_blank" rel="noopener">Trustpilot</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -159,25 +168,6 @@ export default function Footer() {
                 <div className="footer-bottom">
                     <div className="copyright">
                         <p>©2025, HALPER PRIVACY POLICY</p>
-                        <div className="lang-switch" onClick={toggleDropdown}>
-                            <img id="current-flag" src="https://flagcdn.com/w40/gb.png" alt="EN" />
-                            <span id="current-lang">EN</span>
-                            <span className="arrow"><KeyboardArrowDownIcon /></span>
-                            <div className="dropdown" id="lang-dropdown">
-                                <div onClick={() => selectLanguage('EN', 'https://flagcdn.com/w40/gb.png')}>
-                                    <img src="https://flagcdn.com/w40/gb.png" alt="EN" /> EN
-                                </div>
-                                <div onClick={() => selectLanguage('RU', 'https://flagcdn.com/w40/ru.png')}>
-                                    <img src="https://flagcdn.com/w40/ru.png" alt="RU" /> RU
-                                </div>
-                                <div onClick={() => selectLanguage('FR', 'https://flagcdn.com/w40/fr.png')}>
-                                    <img src="https://flagcdn.com/w40/fr.png" alt="FR" /> FR
-                                </div>
-                                <div onClick={() => selectLanguage('ES', 'https://flagcdn.com/w40/es.png')}>
-                                    <img src="https://flagcdn.com/w40/es.png" alt="ES" /> ES
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div className="footer-social">
                         <div className="footer-social-icon"><YouTubeIcon sx={{ fontSize: "22px" }} /></div>

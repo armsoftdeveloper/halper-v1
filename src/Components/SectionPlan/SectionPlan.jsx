@@ -31,34 +31,35 @@ export default function SectionPlan() {
   const plans = [
     {
       title: "Essential Plan",
-      description: "Eget odio vitae ac at vestibulum",
+      description: "The perfect and cost-effective solution for solopreneurs and small businesses.",
       price: {
-        monthly: 16,
-        yearly: 19,
+        monthly: 29,
+        yearly: 290,
       },
       features: [
+        "Up to 50 client communications/month",
         "Instagram Integration",
         "Messaging Automation",
         "Appointment Scheduling",
         "Monthly Reporting & Insights",
-        "Multi-Channel Support",
-        "Operate with Halper through these channels or use the app with extended functionality for free"
+        "Operate with Halper through these channels or use the app with extended functionality for free."
       ],
     },
     {
       title: "Pro Plan",
-      description: "Eget odio vitae ac at vestibulum",
+      description: "Take your business to the next level with Halper Pro.",
       price: {
-        monthly: 24,
-        yearly: 29,
+        monthly: 39,
+        yearly: 390,
       },
       features: [
-        "Instagram Integration",
-        "Messaging Automation",
-        "Appointment Scheduling",
-        "Monthly Reporting & Insights",
-        "Multi-Channel Support",
-        "Operate with Halper through these channels or use the app with extended functionality for free"
+        "Whats included?",
+        "50–150 client communications/month",
+        "Everything in Essential, plus",
+        "Business Analytics",
+        "Lead Generation & Qualification",
+        "Mental Health Assistant",
+        "Customer Profiles"
       ],
     },
   ];

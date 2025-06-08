@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./services.css";
-import img from "../../images/servicesPhone.png";
+import img from "../../images/sImg.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 // Icons

@@ -10,13 +10,13 @@ export default function SolutionsSection() {
     const features = [
         {
             title: "AI-Powered Task Automation",
-            descStart: "Halper is the best ",
+            descStart: "Halper is the best",
             boldPart: "AI manager for solopreneurs",
             descEnd: ", automating your routine tasks like client communication, scheduling, and admin work, giving you more time to focus on what matters.",
         },
         {
             title: "Effortless Client Management",
-            descStart: "With Halper, ",
+            descStart: "With Halper,",
             boldPart: "managing your clients becomes seamless.",
             descEnd: " This AI virtual manager for small businesses streamlines appointments, follow-ups, and communication, boosting",
         },
@@ -27,10 +27,10 @@ export default function SolutionsSection() {
             descEnd: " From task management to strategic insights, Halper helps you scale and optimize your ",
         },
         {
-            title: "24/7 Smart Support",
-            descStart: "Halper adapts to your business needs, making it the ultimate ",
+            title: "Time-Saving Productivity Boost",
+            descStart: "Halper handles your business processes efficiently,",
             boldPart: "AI manager for business owners.",
-            descEnd: " From task management to strategic insights, Halper helps you scale and optimize your ",
+            descEnd: "so you can focus on growth. As the best AI manager for solopreneurs, it saves you time, reduces stress, and enhances overall productivity.",
         },
     ];
 
@@ -49,10 +49,7 @@ export default function SolutionsSection() {
                 >
                     <h2 className="solutions__title">Solutions by Halper</h2>
                     <p className="solutions__subtitle">
-                        With Halper, <b>managing your clients becomes seamless.</b>
-                    </p>
-                    <p className="solutions__subtitle">
-                        This AI virtual manager for small businesses streamlines appointments.
+                        Everything you need to run your solo business — automated, organized, and always one step ahead.
                     </p>
                 </motion.div>
 
@@ -90,7 +87,6 @@ export default function SolutionsSection() {
                 <div className="solutions__btn-container">
                     <button className="solutions__btn"
                         onClick={() => setPopupOpen(true)}
-
                     >
                         Try For Free Now <ArrowForwardIcon />
                     </button>

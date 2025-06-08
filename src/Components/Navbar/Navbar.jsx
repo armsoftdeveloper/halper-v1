@@ -3,8 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState, useRef } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import LoginIcon from '@mui/icons-material/Login';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import logo from "../../images/logo.png";
 import { fetchNavbarLinks } from "./navbarSlice";
 import "./navbar.css";
@@ -50,24 +49,16 @@ const partnersMenu = [
   "Ambassadors",
 ];
 
-const resourcesMenu = [
-  "Blog",
-  "Press",
-  "Get support",
-  "Contact us",
-];
+const resourcesMenu = ["Blog", "Press", "Get support", "Contact us"];
 
 export default function Navbar() {
   const dispatch = useDispatch();
   const { links, status } = useSelector((state) => state.navbar);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-
-  // Для отображения подменю на десктопе
-  const [openDropdown, setOpenDropdown] = useState(null); // 'solutions', 'partners', 'resources' или null
-
-  // Для мобильного меню - какое подменю открыто, null если ни одно
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState(null);
+  const dropdownRef = useRef();
 
   useEffect(() => {
     if (status === "idle") {
@@ -75,17 +66,26 @@ export default function Navbar() {
     }
   }, [dispatch, status]);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [mobileMenuOpen]);
+
   const handleCloseMenu = () => {
     setIsClosing(true);
     setTimeout(() => {
       setMobileMenuOpen(false);
       setIsClosing(false);
-      setMobileSubmenuOpen(null); // закрываем все подменю при закрытии меню
+      setMobileSubmenuOpen(null);
     }, 300);
   };
-
-  // Закрываем подменю при клике вне
-  const dropdownRef = useRef();
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -119,7 +119,6 @@ export default function Navbar() {
     );
   }
 
-  // Рендер подменю с разделением для solutions
   const renderDropdown = (key) => {
     if (key === "solutions") {
       return (
@@ -128,7 +127,9 @@ export default function Navbar() {
             <h4 className="dropdown-title">By Services</h4>
             <ul>
               {solutionsMenu.byServices.map((item, idx) => (
-                <li key={idx} className="dropdown-menu__item">{item}</li>
+                <li key={idx} className="dropdown-menu__item">
+                  <a href="#">{item}</a>
+                </li>
               ))}
             </ul>
           </div>
@@ -136,7 +137,9 @@ export default function Navbar() {
             <h4 className="dropdown-title">By Industry</h4>
             <ul>
               {solutionsMenu.byIndustry.map((item, idx) => (
-                <li key={idx} className="dropdown-menu__item">{item}</li>
+                <li key={idx} className="dropdown-menu__item">
+                  <a href="#">{item}</a>
+                </li>
               ))}
             </ul>
           </div>
@@ -158,13 +161,8 @@ export default function Navbar() {
     }
   };
 
-  // Обработчик клика на мобильном меню, открывающий/закрывающий подменю
   const toggleMobileSubmenu = (label) => {
-    if (mobileSubmenuOpen === label) {
-      setMobileSubmenuOpen(null);
-    } else {
-      setMobileSubmenuOpen(label);
-    }
+    setMobileSubmenuOpen((prev) => (prev === label ? null : label));
   };
 
   return (
@@ -177,35 +175,34 @@ export default function Navbar() {
             </Link>
             <ul className="navbar__list desktop-only" ref={dropdownRef}>
               {links.map((item, index) => {
-                const hasDropdown =
-                  item.label === "Solutions" ||
-                  item.label === "Partners" ||
-                  item.label === "Resources";
+                const label = item.label.toLowerCase();
+                const hasDropdown = label === "solutions" || label === "partners" || label === "resources";
 
                 return (
                   <li
                     key={index}
                     className="navbar__list-item"
-                    onMouseEnter={() =>
-                      hasDropdown && setOpenDropdown(item.label.toLowerCase())
-                    }
+                    onMouseEnter={() => hasDropdown && setOpenDropdown(label)}
                     onMouseLeave={() => hasDropdown && setOpenDropdown(null)}
                   >
-                    <button className="navbar__link">
-                      {item.label}{" "}
-                    </button>
-                    {openDropdown === item.label.toLowerCase() &&
-                      renderDropdown(item.label.toLowerCase())}
+                    {hasDropdown ? (
+                      <button className="navbar__link">
+                        {item.label}
+                      </button>
+                    ) : (
+                      <Link to={item.to} className="navbar__link">
+                        {item.label}
+                      </Link>
+                    )}
+                    {openDropdown === label && renderDropdown(label)}
                   </li>
                 );
               })}
             </ul>
+
           </div>
 
           <div className="navbar__right">
-            <button className="navbar__btn navbar__btn--demo--login button-hide" type="button">
-              Login
-            </button>
             <button className="navbar__btn navbar__btn--demo" type="button">
               Schedule Demo
             </button>
@@ -231,46 +228,50 @@ export default function Navbar() {
 
           <ul className="mobile-menu__list">
             {links.map((item, index) => {
-              const hasSubmenu =
-                item.label === "Solutions" ||
-                item.label === "Partners" ||
-                item.label === "Resources";
+              const label = item.label;
+              const hasSubmenu = label === "Solutions" || label === "Partners" || label === "Resources";
 
               return (
                 <li key={index} className="mobile-menu__item">
-                  <button
-                    onClick={() => {
-                      if (hasSubmenu) {
-                        toggleMobileSubmenu(item.label);
-                      } else {
-                        handleCloseMenu();
-                      }
-                    }}
-                    className="mobile-menu__button"
-                    aria-expanded={mobileSubmenuOpen === item.label}
-                  >
-                    {item.label}
-                    {hasSubmenu && <KeyboardArrowDownIcon />}
-                  </button>
-
-                  {hasSubmenu && mobileSubmenuOpen === item.label && (
-                    <ul className="mobile-submenu">
-                      {(item.label === "Solutions"
-                        ? [...solutionsMenu.byServices, ...solutionsMenu.byIndustry]
-                        : item.label === "Partners"
-                        ? partnersMenu
-                        : resourcesMenu
-                      ).map((subItem, subIndex) => (
-                        <li key={subIndex} className="mobile-submenu__item">
-                          {subItem}
-                        </li>
-                      ))}
-                    </ul>
+                  {hasSubmenu ? (
+                    <>
+                      <button
+                        onClick={() => toggleMobileSubmenu(label)}
+                        className="mobile-menu__button"
+                        aria-expanded={mobileSubmenuOpen === label}
+                      >
+                        {item.label}
+                        <KeyboardArrowDownIcon />
+                      </button>
+                      {mobileSubmenuOpen === label && (
+                        <ul className="mobile-submenu">
+                          {(label === "Solutions"
+                            ? [...solutionsMenu.byServices, ...solutionsMenu.byIndustry]
+                            : label === "Partners"
+                              ? partnersMenu
+                              : resourcesMenu
+                          ).map((subItem, subIndex) => (
+                            <li key={subIndex} className="mobile-submenu__item">
+                              {subItem}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={item.to}
+                      onClick={handleCloseMenu}
+                      className="mobile-menu__button"
+                    >
+                      {item.label}
+                    </Link>
                   )}
                 </li>
               );
             })}
           </ul>
+
         </div>
       )}
     </>

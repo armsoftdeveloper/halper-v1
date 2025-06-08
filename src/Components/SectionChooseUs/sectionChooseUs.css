@@ -21,7 +21,7 @@
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 24px;
-    color: #020637;
+    color: rgba(53, 56, 95, 1);
     max-width: 880px;
     margin: 0 auto;
 }
@@ -99,7 +99,7 @@
 
 .choose-us__cell img {
     width: 100%;
-    height: 87%;
+    height: 80%;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
     cursor: pointer;
@@ -134,11 +134,14 @@
     color: #FFFFFF;
     border-radius: 20px;
     border: none;
-    font-size: 24px;
-    font-family: "Manrope", sans-serif;
+    font-family: Manrope;
     font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    transition: 0.5s all;
     cursor: pointer;
-    transition: background 0.3s ease;
 }
 
 .choose-us__button svg {
@@ -204,7 +207,7 @@
         font-size: 28px;
     }
 
-    .choose-us__subtitle{
+    .choose-us__subtitle {
         font-size: 12px !important;
     }
 

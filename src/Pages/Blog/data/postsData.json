@@ -1,0 +1,242 @@
+{
+  "categories": [
+    "All",
+    "Finance",
+    "Real Estate",
+    "Category A",
+    "Category B",
+    "Category C",
+    "Category D"
+  ],
+  "editorsPosts": [
+    {
+      "id": 1,
+      "title": "Generated Post #1",
+      "category": "Finance",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Tips",
+      "time": "16 May 2025"
+    },
+    {
+      "id": 2,
+      "title": "Generated Post #2",
+      "category": "Finance",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Tips",
+      "time": "15 May 2025"
+    },
+    {
+      "id": 3,
+      "title": "Generated Post #3",
+      "category": "Category B",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Trends",
+      "time": "24 May 2025"
+    },
+    {
+      "id": 4,
+      "title": "Generated Post #4",
+      "category": "Real Estate",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Strategy",
+      "time": "14 May 2025"
+    }
+  ],
+  "latestPosts": [
+    {
+      "id": 201,
+      "title": "Generated Post #201",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Strategy",
+      "time": "28 May 2025"
+    },
+    {
+      "id": 202,
+      "title": "Generated Post #202",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Analysis",
+      "time": "31 May 2025"
+    },
+    {
+      "id": 203,
+      "title": "Generated Post #203",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Update",
+      "time": "15 May 2025"
+    },
+    {
+      "id": 204,
+      "title": "Generated Post #204",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Analysis",
+      "time": "20 May 2025"
+    },
+    {
+      "id": 205,
+      "title": "Generated Post #205",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Analysis",
+      "time": "21 May 2025"
+    },
+    {
+      "id": 206,
+      "title": "Generated Post #206",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "10 May 2025"
+    },
+    {
+      "id": 206,
+      "title": "Generated Post #206",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "10 May 2025"
+    },
+    {
+      "id": 206,
+      "title": "Generated Post #206",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "10 May 2025"
+    },
+    {
+      "id": 206,
+      "title": "Generated Post #206",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "10 May 2025"
+    },
+    {
+      "id": 206,
+      "title": "Generated Post #206",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "10 May 2025"
+    },
+    {
+      "id": 206,
+      "title": "Generated Post #206",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "10 May 2025"
+    },
+    {
+      "id": 207,
+      "title": "Generated Post #207",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "10 May 2025"
+    },
+    {
+      "id": 208,
+      "title": "Generated Post #208",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Update",
+      "time": "30 May 2025"
+    },
+    {
+      "id": 209,
+      "title": "Generated Post #209",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Tips",
+      "time": "08 May 2025"
+    },
+    {
+      "id": 210,
+      "title": "Generated Post #210",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "05 Jun 2025"
+    },
+    {
+      "id": 210,
+      "title": "Generated Post #210",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "05 Jun 2025"
+    },
+    {
+      "id": 210,
+      "title": "Generated Post #210",
+      "category": "Latest",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "05 Jun 2025"
+    }
+  ],
+  "recommendedPosts": [
+    {
+      "id": 104,
+      "title": "Generated Post #104",
+      "category": "Recommended",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Guide",
+      "time": "05 Jun 2025"
+    },
+    {
+      "id": 105,
+      "title": "Generated Post #105",
+      "category": "Recommended",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Trends",
+      "time": "12 May 2025"
+    },
+    {
+      "id": 107,
+      "title": "Generated Post #107",
+      "category": "Recommended",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Trends",
+      "time": "09 May 2025"
+    },
+    {
+      "id": 108,
+      "title": "Generated Post #108",
+      "category": "Recommended",
+      "description": "Ligula eget pulvinar fringilla mus duis vitae. Nec convallis turpis viverra ... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vel ligula id leo dignissim fermentum a sit amet felis. Integer porttitor.",
+      "image": "blog_img.jpg",
+      "tag": "Analysis",
+      "time": "22 May 2025"
+    }
+  ]
+}

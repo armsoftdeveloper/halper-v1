@@ -95,6 +95,11 @@ footer {
 
 .footer-bottom-logo {
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .footer-xl-text {

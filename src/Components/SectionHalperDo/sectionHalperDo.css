@@ -1,6 +1,6 @@
 .halper-do {
   text-align: center;
-  background: url('../../images/bg1.png');
+  background: url('../../images/bg2.png');
   background-repeat: no-repeat;
   background-size: 100% 130%;
   display: flex;
@@ -65,7 +65,7 @@
 .halper-do__features {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .halper-do__feature {
@@ -241,5 +241,10 @@
 @media (max-width:768px) {
   .halper-do {
     margin-top: 10px;
+    padding: 20px;
+  }
+
+  .halper-do__btn-container {
+    padding-left: 0px;
   }
 }

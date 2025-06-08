@@ -74,60 +74,11 @@
   font-size: 15px;
 }
 
-.form-group.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
 /* Toggle switch */
 .toggle-wrapper {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.toggle-wrapper input[type="checkbox"] {
-  display: none;
-}
-
-.toggle-slider {
-  position: relative;
-  width: 50px;
-  height: 24px;
-  background: #f0f0f0;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  flex-shrink: 0;
-}
-
-.toggle-slider::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 20px;
-  height: 20px;
-  background: #5463f6;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-input[type="checkbox"]:checked+.toggle-slider {
-  background: #05be05;
-  box-shadow: 0 3px 8px #05be0566;
-}
-
-input[type="checkbox"]:checked+.toggle-slider::before {
-  transform: translateX(26px);
-  background: white;
-}
-
-.toggle-text {
-  font-size: 14px;
-  color: #1a1a1a;
-  user-select: none;
 }
 
 .calculator__result {
@@ -189,7 +140,7 @@ input[type="checkbox"]:checked+.toggle-slider::before {
 
 .result-value {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 34px;
   color: rgba(84, 99, 246, 1);
   font-family: "Manrope", sans-serif;
   white-space: nowrap;
@@ -482,8 +433,8 @@ input[type="checkbox"]:checked+.toggle-slider::before {
   }
 }
 
-@media (max-width:465px){
-  .result-boxes{
+@media (max-width:465px) {
+  .result-boxes {
     flex-direction: column;
     height: 300px;
   }

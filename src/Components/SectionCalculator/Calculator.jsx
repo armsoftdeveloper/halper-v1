@@ -41,7 +41,7 @@ export default function Calculator() {
   useEffect(() => {
     if (niche) {
       const random = Math.random() * (1.15 - 0.85) + 0.85;
-      setNicheMultiplier(parseFloat(random.toFixed(2)));
+      setNicheMultiplier(parseFloat(random.toFixed(0)));
     }
   }, [niche]);
 
@@ -77,7 +77,7 @@ export default function Calculator() {
     industryMultiplier *
     nicheMultiplier *
     12
-  ).toFixed(2);
+  ).toFixed(0);
 
   return (
     <div className="calculator">
@@ -106,14 +106,12 @@ export default function Calculator() {
         <div className="form-group">
           <label htmlFor="location">Select your location</label>
           <select id="location" className="custom-select" value={location} onChange={(e) => setLocation(e.target.value)}>
-            <option value="USA">USA</option>
-            <option value="UK">UK</option>
-            <option value="CANADA">Canada</option>
+            <option value="USA">USA , UK , CANADA</option>
             <option value="EUROPE">Europe</option>
+            <option value="other">Other</option>
           </select>
         </div>
 
-        {/* --- Sliders --- */}
         <div className="range-control">
           <div className="custom-range-wrapper">
             <div className="range-title">Average Appointments per Month</div>
@@ -146,14 +144,6 @@ export default function Calculator() {
           </div>
         </div>
 
-        {/* --- Toggle --- */}
-        <div className="checkbox">
-          <label className="toggle-wrapper">
-            <input type="checkbox" checked={usesTool} onChange={(e) => setUsesTool(e.target.checked)} />
-            <span className="toggle-slider"></span>
-            <span className="toggle-text">Do you use an AI assistant, tool or paid admin services?</span>
-          </label>
-        </div>
       </form>
 
       {/* --- Results --- */}
@@ -166,7 +156,7 @@ export default function Calculator() {
           </div>
           <div className="result-box">
             <div className="result-label">Dollar ($)</div>
-            <div className="result-value">{savings.toFixed(2)}</div>
+            <div className="result-value">{savings.toFixed(0)}</div>
           </div>
         </div>
         <div className="result-note-container">

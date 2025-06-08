@@ -1,18 +1,26 @@
 import { useState, useEffect } from "react";
 import "./stepper.css";
-import Bg from "../../images/IMAGE.png";
+import Bg1 from "../../images/step1.png";
+import Bg2 from "../../images/step2.png";
+import Bg3 from "../../images/step3.png";
+import Bg4 from "../../images/step4.png";
+import Bg5 from "../../images/step5.png";
+import Bg6 from "../../images/step6.png";
+import Bg7 from "../../images/step7.png";
+import Bg8 from "../../images/step8.png";
+
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { usePopup } from '../../Blocks/TryForFreePopup/PopupContext';
 
 const steps = [
-  { title: "Client Communication & CRM Automation", content: "This is the content of step 1.", img: Bg },
-  { title: "Scheduling & Calendar Integration", content: "Here goes the content of step 2.", img: Bg },
-  { title: "Financial Management", content: "Step 3 says hello!", img: Bg },
-  { title: "Business Analytics & Insights", content: "Almost done - step 4.", img: Bg },
-  { title: "Marketing Automation", content: "The final step!", img: Bg },
-  { title: "Inventory & Product Management", content: "The final step!", img: Bg },
-  { title: "Employee & Resource Management", content: "The final step!", img: Bg },
-  { title: "Customer Success & Retention", content: "The final step!", img: Bg },
+  { title: "Client Communication & CRM Automation", content: "HALPER centralizes all client messages from Instagram, SMS, and voice into one seamless flow. It responds instantly, updates your CRM automatically, and ensures every conversation is tracked and followed up — so no lead slips through the cracks.", img: Bg1 },
+  { title: "Scheduling & Calendar Integration", content: "Clients can book, reschedule, or cancel through chat or voice. HALPER syncs with your calendar in real time, sends reminders, and prevents double bookings. Your schedule stays organized without manual effort — even when you’re off the clock.", img: Bg2 },
+  { title: "Financial Management", content: "HALPER helps you track revenue, monitor payments, and stay on top of income trends. From invoices to payment confirmations, every financial detail is logged automatically, giving you a clear overview of cash flow without spreadsheets.", img: Bg3 },
+  { title: "Business Analytics & Insights", content: "See what’s working in your business at a glance. HALPER shows live stats on bookings, income, message response rates, and client retention — helping you make smarter, data-backed decisions in real time.", img: Bg4 },
+  { title: "Marketing Automation", content: "HALPER keeps clients engaged with automated follow ups, reactivation flows, and personalized campaigns. Whether you’re reconnecting with inactive clients or upselling a service, marketing happens on autopilot.", img: Bg5 },
+  { title: "Inventory & Product Management", content: "Track products, manage stock levels, and get low-stock alerts without manual input. HALPER streamlines inventory workflows so you always know what’s on hand — whether you’re selling skincare, tools, or wellness products.", img: Bg6 },
+  { title: "Employee & Resource Management", content: "Even if you grow beyond solo, HALPER makes it easy to assign tasks, manage availability, and organize service providers. Staff calendars and responsibilities stay in sync — no micromanagement required.", img: Bg7 },
+  { title: "Customer Success & Retention", content: "HALPER helps you keep clients coming back. It sends personalized reminders, tracks feedback and satisfaction, and follows up automatically — so you can build long-term loyalty without chasing every message.", img: Bg8 },
 ];
 
 export default function MainStepper() {
@@ -59,8 +67,8 @@ export default function MainStepper() {
                   <div className="stepper-typography">
                     <h2 className="stepper-title">{step.title}</h2>
                     <ul>
-                      <li>Sit ultricies fermentum turpis suscipit in tellus platea urna pellentesque. At tempus dignissim elit integer. Lorem ac ultrices cras platea massa ante eget enim.</li>
-                      <li>Lorem ipsum dolor sit amet consectetur. Integer adipiscing mauris vitae nisi urna tempor pretium odio. Feugiat nec non magna vitae vulputate. Nisi tristique nec et consequat. </li>
+                      <li>{step.content}</li>
+                      <li>{step.content}</li>
                     </ul>
                     <div className="step-content-btn-parent">
                       <button className="stepper-typography-button"
@@ -84,8 +92,8 @@ export default function MainStepper() {
                 <div className="stepper-typography">
                   <h2 className="stepper-title">{steps[activeStep || 0].title}</h2>
                   <ul>
-                    <li>Sit ultricies fermentum turpis suscipit in tellus platea urna pellentesque. At tempus dignissim elit integer. Lorem ac ultrices cras platea massa ante eget enim.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur. Integer adipiscing mauris vitae nisi urna tempor pretium odio. Feugiat nec non magna vitae vulputate. Nisi tristique nec et consequat. </li>
+                    <li>{steps[activeStep || 0].content}</li>
+                    <li>{steps[activeStep || 0].content}</li>
                   </ul>
                   <div className="step-content-btn-parent">
                     <button className="stepper-typography-button"

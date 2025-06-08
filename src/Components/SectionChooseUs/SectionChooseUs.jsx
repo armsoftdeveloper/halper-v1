@@ -16,10 +16,7 @@ export default function SectionChooseUs() {
                     <div className="choose-us__text-block fade-in">
                         <h2 className="choose-us__title">Who choose us</h2>
                         <p className="choose-us__subtitle">
-                            With Halper, <b>managing your clients becomes seamless.</b>
-                        </p>
-                        <p className="choose-us__subtitle">
-                            This AI virtual manager for small businesses streamlines appointments.
+                            Solo professionals who want less admin, more bookings, and a smoother way to run and grow their service business.
                         </p>
                     </div>
 

@@ -18,19 +18,19 @@ const features = [
             "Halper integrates with Instagram, Telegram, WhatsApp, and Facebook Messenger to manage client communication – bookings, reminders, and inquiries – all in one place."
     },
     {
-        title: "Streamlined Appointments",
+        title: "Automated Appointment Scheduling",
         description:
-            "Halper integrates with Instagram, Telegram, WhatsApp, and Facebook Messenger to manage client communication – bookings, reminders, and inquiries – all in one place."
+            "Clients can book, reschedule, or cancel appointments via Instagram, WhatsApp, Telegram, or Messenger, and Halper syncs everything with your calendar, saving you time and ensuring seamless coordination."
     },
     {
-        title: "Scalable Support",
+        title: "AI CRM",
         description:
-            "Halper integrates with Instagram, Telegram, WhatsApp, and Facebook Messenger to manage client communication – bookings, reminders, and inquiries – all in one place."
+        "Halper automates lead tracking and follow-ups through Instagram, WhatsApp, Telegram, and Messenger, helping convert leads into loyal clients."
     },
     {
-        title: "Actionable Insights",
+        title: "All-in-One Solution",
         description:
-            "Halper integrates with Instagram, Telegram, WhatsApp, and Facebook Messenger to manage client communication – bookings, reminders, and inquiries – all in one place."
+        "Halper is the all-in-one tool for solo entrepreneurs, streamlining communication, scheduling, and administrative work across multiple platforms."
     },
 ];
 
@@ -63,10 +63,7 @@ export default function SectionHalperDo() {
                 >
                     <h2 className="halper-do__title">What Halper Can Do for You</h2>
                     <p className="halper-do__subtitle">
-                        With Halper, <b>managing your clients becomes seamless.</b>
-                    </p>
-                    <p className="halper-do__subtitle">
-                        This AI virtual manager for small businesses streamlines appointments.
+                        HALPER automates chats, bookings, reminders and follow ups so you can stay focused on growing your business
                     </p>
                 </motion.div>
 

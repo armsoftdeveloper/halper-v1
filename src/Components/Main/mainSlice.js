@@ -47,7 +47,7 @@ export const fetchMainData = createAsyncThunk('main/fetchMainData', async () => 
             { icon: 'creditCard', text: 'No credit card required' },
         ],
         footer: {
-            leftDescription: 'Connect. Automate .Dominate',
+            leftDescription: 'Connect. Automate. Dominate. Halper syncs with the tools that run your business.',
             rightTitle: 'Halper AI',
             rightDescription: 'syncs with the tools that run your bussiness.',
             socialIcons: [
